@@ -1,0 +1,169 @@
+ID
+Input text  id:gh-ac  robot framework book  #ebay.com search box
+Input text  id=gh-ac  robot framework book  #ebay.com search box
+
+NAME
+Input text  name:-nkw  robot framework book  #ebay.com search box
+
+LINK
+Click Link  link:Sell
+
+PARTIAL LINK
+Click Link  partial link:Seller Infor
+
+XPATH
+Input Text  //input[id='first_name']  Zsolt
+Input Text  xpath://input[id='first_name']  Zsolt
+# XML Path language; HTML DOM structure
+# structure XPath=//tagname[@Attribute='Value']   //input[@id='first_name']  developer.salesforce.com/signup
+#másik példa: //input[@id='last_name'] developer tools-ban elements és CTRL+F keresés
+# abszolut: / kezdődik. root elementtől az elemünkig. (complete path) DOM struktúrában kis változás, érvénytelen lesz.
+/html/body/div[1]/div[5]/div[1]/div[2]/div/div/div[2]/form/div[2]/div[1]/input  példa:salesforce link , first name --> copy full XPath
+# relatív: // kezdődik. starts from the mid of the HTML DOM structure
+//*[@id="first_name"]     //input[@name="user[first_name]"]
+
+starts with function:  //input[starts-with(@id,'last_name')
+FORMAT XPath=//tagname[starts-with(@Attribute,'Value')]
+Input Text  xpath://input[starts-with(@id,'last_name')]
+Finding dynamic webelements: ID = session4565654, session45998231
+
+contains function:  //input[contains(@name,'email')]
+FORMAT XPath=//tagname[contains(@Attribute,'Value')]
+finding dynamic webelements: ID = 4565654name, 45998231name
+
+text method function:  //a[text()=' Terms of Use']
+FORMAT: Xpath=//tagname[text()='ActualText']
+used to find element with exact text match
+
+AND, OR operator:  //input[@type='text' and @name='user[first_name]']
+FORMAT: Xpath=//tagname[@Attribute='Value' or @attribute='value']
+        Xpath=//tagname[@Attribute='Value' and @attribute='value']
+more than two attributes to find element on webpage
+
+Axes method:
+//select[@name='user[country]']//self::select
+//select[@name='user[country]']//parent::form
+//select[@name='user[country]']//child::option   -->    //select[@name='user[country]']//child::option[96] info: HU elem
+//option[@value='HU']//parent::select
+drop down menu salesforce oldal (country)
+FORMAT:
+parent://tagname[@Attribite='Value']//parent::tagname   selects the parent of the context (Current) node
+child: //tagname[@Attribite='Value']//child::tagname    selecs all children of the current node
+self: //tagname[@Attribite='Value']//self::tagname   Selects the current node
+
+Axes - Descendant (utód) or descendant-or-self:
+it selects all of the descendants (children, grandchildren, etc.) of context (current) node
+//div[@class='signup_container']//descendant::div   29 találat
+//div[@class='signup_container']//descendant-or-self::div   sajat magat is hozzáad 30
+//*[@class='signup_container']//descendant::div[@class='promo regular']   1 találat
+FORMAT:
+//tagname[@Attribute='Value']//descendant::tagname
+//tagname[@Attribute='Value']//descendant-or-self::tagname
+hány darab utódja van
+
+Axes - ancestor(előd) or ancestor-or-self:
+it selects the ancestors (parent, grandparent, etc.) of context (current) node
+//div[@id='errorbox']//ancestor::div    7 találat
+//div[@id='errorbox']//ancestor-or-self::div    8 találat
+//div[@id='errorbox']//ancestor::div[@id='content']   1 találat
+FORMAT:
+//tagname[@Attribute='Value']//ancestor::tagname
+//tagname[@Attribute='Value']//ancestor-or-self::tagname
+
+Axes - following, following-sibling
+following: it selects all the nodes that appear after the context (current) node
+following-sibling: itt selects all the nodes that have ther same parent as the context (current) node and appear after the context (current) node
+//option[@value='AG']//following::option   220 találat, megadott elem után mennyi van
+//option[@value='Developer']//following::option   233 találat
+//option[@value='Developer']//following-sibling::option   4 találat, mert azonos parent
+//option[@value='Developer']//following-sibling::option[@value='IT Manager/Executive']   1 találat
+FORMAT:
+//tagname[@Attribute='Value']//following::tagname
+//tagname[@Attribute='Value']//following-sibling::tagname
+dropdown salesforce
+
+Axes - preceding or preceding-sibling
+preceding: it selects all nodes that appear before the context (current) node
+preceding-sibling: it selects all the nodes have the same parent as the context (current) node and appear before the context (current) node
+//option[@value='AS']//preceding::option    10 találat megadott elem elött mennyi van
+//option[@value='AS']//preceding-sibling::option    4 találat, azonos parent
+//option[@value='AS']//preceding-sibling::option[@value='US']   1 találat
+FORMAT:
+//tagname[@Attribute='Value']//preceding::tagname
+//tagname[@Attribute='Value']//preceding-sibling::tagname
+
+CSS
+Cascading style sheets language describes the presentation of the HTML document
+syntax:tagName[AttributName='AttributValue']
+    select by ID: tagName#elementID
+Example: input[id=first_name]
+    select by ID: input#first_name
+Salesforce developer page
+Input Text  css:input[name='user[first_name]']  Zsolt
+Input Text  css:input#first_name  Zsolt
+
+CSS using class attribute
+syntax:  tagName.elemenID
+example: input.signup
+ID #   Class .
+input.textField   6 találat
+input.signUp   1 találat  input[class='signUp']
+
+CSS selector using other webelement attributes
+like: type, placeholder, value
+syntax: tagName[AttributName='AttributValue']
+exaxmple: input[value='Sign me up']
+input[placeholder='First']
+using mix of tag:
+tagName.classValue[AttributName='AttributValue']
+input.signup[type='submit'][value='Sign me up >']
+tagName#idValue[AttributName='AttributeValue']
+input#submit_btn[type='submit'][value='Sign me up >']
+Input text  css:input#email[placeholder='Your email address'][name='user[email]']  horvath.zsolt82@gmail.com
+
+CSS - sub-string
+helpful identifying dynamic webelements wih the help of partial stringmatches
+3 characters:
+'^' - signify'sprefix of the text   input[name^='conuntry_c']   utána változik
+'$' - signify'ssuffix of the text   input[name$='y_client'] elötte változik
+'*' - signify's the sub string of the text  input[name*='try_cl']   első utolsó rész is változik
+Examples from Salesforce developer page
+input[name^='user[p']
+input[name$='_code]']
+input[name*='tal_co'][name^='user[p']
+
+CSS selector - next sibling
+located using the + operator
+sibling combinator (+) seperates two CSS seletors and matches the second webelement only
+if it immadiately follows the first webelement and both are the child of same parent webelement
+Format:
+tagName[AttributName='AttributValue']+tagName[AttributName='AttributValue']
+role from salesforce    option[value='Developer']+option[value='Architect/CTO']
+
+CSS selector - pseudo-classes  a keyword added to a selector that specifies a specifies state of the selected webelement
+    first-child     returns first element from the group of sibling elements
+    last-child      returns last element from the group of sibling elements
+    nth-child()     returns elements based on their position in a group of siblings
+    nth-last-child()  returns elements based on their position among a group of siblings, counting from the end
+Role inspect from salesforce
+first child: select#job_role>option[selected='selected']        select#job_role>:first-child --> selected   első
+last child: select#job_role>:last-child --> Business Manager/Executive  utolsó
+nth-child(): select#job_role>:nth-child(2) --> Developer    elejéről számol
+nth-last-child(): select#job_role>:nth-last-child (2) --> IT Manager/Executive  végéről számol
+
+CSS selector - pseudo classes continue
+    first-of-type   form#deorg_form>input:first-of-type
+    last-of-type    form#deorg_form>input:last-of-type
+    nth-of-type()   form#deorg_form>input:nth-of-type(2)
+salesforce, div
+
+
+
+
+Tools:
+ChroPath  chrome
+https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo/related
+xPath Finder
+Ruto XPath finder
+Eskry???
+
