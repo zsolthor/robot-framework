@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.1 on win32)" generated="20210203 12:05:57.875" rpa="false">
+<suite id="s1" name="32learnHandlingAlerts" source="E:\RobotFramework\my_first_project\test\32learnHandlingAlerts.robot">
+<test id="s1-t1" name="TC Handling Alerts Operations">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210203 12:05:58.148" level="INFO">Opening browser 'Chrome' to base url 'https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert'.</msg>
+<status status="PASS" starttime="20210203 12:05:58.148" endtime="20210203 12:06:01.443"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210203 12:06:01.443" endtime="20210203 12:06:01.562"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:03.564" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210203 12:06:01.563" endtime="20210203 12:06:03.564"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:accept-choices</arg>
+</arguments>
+<msg timestamp="20210203 12:06:03.566" level="INFO">Clicking element 'id:accept-choices'.</msg>
+<status status="PASS" starttime="20210203 12:06:03.566" endtime="20210203 12:06:03.686"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:05.687" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210203 12:06:03.687" endtime="20210203 12:06:05.687"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id:iframeResult</arg>
+</arguments>
+<msg timestamp="20210203 12:06:05.688" level="INFO">Selecting frame 'id:iframeResult'.</msg>
+<status status="PASS" starttime="20210203 12:06:05.688" endtime="20210203 12:06:06.620"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:08.622" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210203 12:06:06.621" endtime="20210203 12:06:08.622"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:html//body/button</arg>
+</arguments>
+<msg timestamp="20210203 12:06:08.627" level="INFO">Clicking button 'xpath:html//body/button'.</msg>
+<status status="PASS" starttime="20210203 12:06:08.627" endtime="20210203 12:06:09.279"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:10.280" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210203 12:06:09.280" endtime="20210203 12:06:10.280"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>ACCEPT</arg>
+<arg>timeout=5 s</arg>
+</arguments>
+<assign>
+<var>${message1}</var>
+</assign>
+<msg timestamp="20210203 12:06:10.281" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<msg timestamp="20210203 12:06:10.291" level="INFO">${message1} = Hello! I am an alert box!</msg>
+<status status="PASS" starttime="20210203 12:06:10.281" endtime="20210203 12:06:10.292"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm</arg>
+</arguments>
+<msg timestamp="20210203 12:06:10.316" level="INFO">Opening url 'https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm'</msg>
+<status status="PASS" starttime="20210203 12:06:10.315" endtime="20210203 12:06:11.033"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id:iframeResult</arg>
+</arguments>
+<msg timestamp="20210203 12:06:11.035" level="INFO">Selecting frame 'id:iframeResult'.</msg>
+<status status="PASS" starttime="20210203 12:06:11.035" endtime="20210203 12:06:11.070"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:html//body/button</arg>
+</arguments>
+<msg timestamp="20210203 12:06:11.071" level="INFO">Clicking button 'xpath:html//body/button'.</msg>
+<status status="PASS" starttime="20210203 12:06:11.071" endtime="20210203 12:06:11.182"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:13.183" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210203 12:06:11.183" endtime="20210203 12:06:13.183"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>DISMISS</arg>
+<arg>timeout=2 s</arg>
+</arguments>
+<assign>
+<var>${message2}</var>
+</assign>
+<msg timestamp="20210203 12:06:13.184" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:02</msg>
+<msg timestamp="20210203 12:06:13.202" level="INFO">${message2} = Press a button!</msg>
+<status status="PASS" starttime="20210203 12:06:13.183" endtime="20210203 12:06:13.202"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm</arg>
+</arguments>
+<msg timestamp="20210203 12:06:13.224" level="INFO">Opening url 'https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm'</msg>
+<status status="PASS" starttime="20210203 12:06:13.224" endtime="20210203 12:06:13.763"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id:iframeResult</arg>
+</arguments>
+<msg timestamp="20210203 12:06:13.764" level="INFO">Selecting frame 'id:iframeResult'.</msg>
+<status status="PASS" starttime="20210203 12:06:13.764" endtime="20210203 12:06:13.802"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:html//body/button</arg>
+</arguments>
+<msg timestamp="20210203 12:06:13.803" level="INFO">Clicking button 'xpath:html//body/button'.</msg>
+<status status="PASS" starttime="20210203 12:06:13.802" endtime="20210203 12:06:13.963"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:15.965" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210203 12:06:13.964" endtime="20210203 12:06:15.965"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>timeout=2 s</arg>
+</arguments>
+<assign>
+<var>${message2}</var>
+</assign>
+<msg timestamp="20210203 12:06:15.968" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:02</msg>
+<msg timestamp="20210203 12:06:16.013" level="INFO">${message2} = Press a button!</msg>
+<status status="PASS" starttime="20210203 12:06:15.967" endtime="20210203 12:06:16.013"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt</arg>
+</arguments>
+<msg timestamp="20210203 12:06:16.014" level="INFO">Opening url 'https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt'</msg>
+<status status="PASS" starttime="20210203 12:06:16.014" endtime="20210203 12:06:16.575"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id:iframeResult</arg>
+</arguments>
+<msg timestamp="20210203 12:06:16.576" level="INFO">Selecting frame 'id:iframeResult'.</msg>
+<status status="PASS" starttime="20210203 12:06:16.575" endtime="20210203 12:06:16.607"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:18.608" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210203 12:06:16.607" endtime="20210203 12:06:18.608"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:html//body/button</arg>
+</arguments>
+<msg timestamp="20210203 12:06:18.609" level="INFO">Clicking button 'xpath:html//body/button'.</msg>
+<status status="PASS" starttime="20210203 12:06:18.609" endtime="20210203 12:06:18.738"></status>
+</kw>
+<kw name="Input Text Into Alert" library="SeleniumLibrary">
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<arguments>
+<arg>My lord</arg>
+<arg>action=DISMISS</arg>
+</arguments>
+<status status="PASS" starttime="20210203 12:06:18.738" endtime="20210203 12:06:18.747"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:20.749" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210203 12:06:18.748" endtime="20210203 12:06:20.749"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt</arg>
+</arguments>
+<msg timestamp="20210203 12:06:20.750" level="INFO">Opening url 'https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt'</msg>
+<status status="PASS" starttime="20210203 12:06:20.750" endtime="20210203 12:06:21.182"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id:iframeResult</arg>
+</arguments>
+<msg timestamp="20210203 12:06:21.182" level="INFO">Selecting frame 'id:iframeResult'.</msg>
+<status status="PASS" starttime="20210203 12:06:21.182" endtime="20210203 12:06:21.211"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:23.212" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210203 12:06:21.212" endtime="20210203 12:06:23.212"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:html//body/button</arg>
+</arguments>
+<msg timestamp="20210203 12:06:23.213" level="INFO">Clicking button 'xpath:html//body/button'.</msg>
+<status status="PASS" starttime="20210203 12:06:23.213" endtime="20210203 12:06:23.368"></status>
+</kw>
+<kw name="Input Text Into Alert" library="SeleniumLibrary">
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<arguments>
+<arg>My lord</arg>
+<arg>action=ACCEPT</arg>
+</arguments>
+<status status="PASS" starttime="20210203 12:06:23.368" endtime="20210203 12:06:23.377"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>Id:demo</arg>
+<arg>Hello My lord! How are you today?</arg>
+</arguments>
+<msg timestamp="20210203 12:06:23.378" level="INFO">Verifying element 'Id:demo' contains exact text 'Hello My lord! How are you today?'.</msg>
+<status status="PASS" starttime="20210203 12:06:23.378" endtime="20210203 12:06:23.416"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:25.417" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210203 12:06:23.417" endtime="20210203 12:06:25.417"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert2</arg>
+</arguments>
+<msg timestamp="20210203 12:06:25.418" level="INFO">Opening url 'https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert2'</msg>
+<status status="PASS" starttime="20210203 12:06:25.418" endtime="20210203 12:06:25.835"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id:iframeResult</arg>
+</arguments>
+<msg timestamp="20210203 12:06:25.836" level="INFO">Selecting frame 'id:iframeResult'.</msg>
+<status status="PASS" starttime="20210203 12:06:25.835" endtime="20210203 12:06:25.867"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:html//body/button</arg>
+</arguments>
+<msg timestamp="20210203 12:06:25.868" level="INFO">Clicking button 'xpath:html//body/button'.</msg>
+<status status="PASS" starttime="20210203 12:06:25.867" endtime="20210203 12:06:25.970"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:27.972" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210203 12:06:25.971" endtime="20210203 12:06:27.972"></status>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<arguments>
+<arg>text=Hello How are you?</arg>
+<arg>action=ACCEPT</arg>
+</arguments>
+<msg timestamp="20210203 12:06:27.975" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20210203 12:06:27.974" endtime="20210203 12:06:28.012"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.sugarcrm.com/request-demo/</arg>
+</arguments>
+<msg timestamp="20210203 12:06:28.014" level="INFO">Opening url 'https://www.sugarcrm.com/request-demo/'</msg>
+<status status="PASS" starttime="20210203 12:06:28.013" endtime="20210203 12:06:29.910"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210203 12:06:31.912" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210203 12:06:29.911" endtime="20210203 12:06:31.912"></status>
+</kw>
+<kw name="Alert Should Not Be Present" library="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<arguments>
+<arg>action=ACCEPT, timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20210203 12:06:31.914" endtime="20210203 12:06:37.021"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210203 12:06:37.023" endtime="20210203 12:06:39.271"></status>
+</kw>
+<doc>TC to demonstrate handling alert operation keywords</doc>
+<status status="PASS" starttime="20210203 12:05:58.148" endtime="20210203 12:06:39.273" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210203 12:05:57.878" endtime="20210203 12:06:39.277"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="32learnHandlingAlerts">32learnHandlingAlerts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
