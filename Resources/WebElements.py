@@ -11,5 +11,4 @@ HeaderPageSearchButton='xpath://*[@id="gh-btn"]'
 
 #LandingPage
 
-
 #SearchResultPage

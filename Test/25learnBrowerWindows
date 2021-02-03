@@ -1,0 +1,47 @@
+*** Settings ***
+Library  SeleniumLibrary
+
+*** Variables ***
+
+
+*** Test Cases ***
+
+browser operation keywords
+    [Documentation]  demonstrate browser operation keywords in robot framework
+    Open Browser  http://google.com  Chrome  alias=Chrome1alias
+    Maximize Browser Window
+    Sleep  2s  ###
+
+    Open Browser  about:blank  Chrome  alias=Chrome2alias
+
+    &{alias}  Get Browser Aliases   #&{alias} = { Chrome1alias=1 | Chrome2alias=2 }   Dictionary
+    Log  @{alias}[0]    #Chrome1alias
+    Log  @{alias}[1]    #Chrome2alias
+
+    @{browser_ID}  Get Browser Ids  # -->@{browser_ID} = [ 1 | 2 ]
+    #Returns index of all active browser as list.
+    Log  @{browser_ID}[0]   #1
+    Log  @{browser_ID}[1]   #2
+
+    Switch Browser  1   #index_or_alias
+    Go To  http://ebay.com  #url
+    Sleep  2s
+
+    Switch Browser  @{browser_ID}[1]    #Chrome2alias  #@{alias}[1] -->ez volt eredetiben
+    Go To  http://salesforce.com  #url
+    Sleep  2s
+
+    Close All Browsers
+
+### chrome1 megnyit google.com oldallal és teljes képernyő
+### chrome2 üres oldal megnyitás, nincs teljes képernyő
+### log file készites
+### chrome1 böngésző menjen ebay.com-ra
+### chrome2 menjen salesforce oldalra
+### minden bezár
+
+###switch browser###
+    # Chrome2alias
+    # 1
+    # @{alias}[1] --> Chrome2alias
+    # @{browser_ID}[1] --> 2

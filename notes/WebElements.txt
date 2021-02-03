@@ -157,9 +157,6 @@ CSS selector - pseudo classes continue
     nth-of-type()   form#deorg_form>input:nth-of-type(2)
 salesforce, div
 
-
-
-
 Tools:
 ChroPath  chrome
 https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo/related
