@@ -1,7 +1,13 @@
+Playlist - Youtube
 https://www.youtube.com/playlist?list=PLL34mf651faORDOyJrk0E6k9FM-wKgfPV
 
-http://robotframework.org/OldSeleniumLibrary/SeleniumLibrary.html#Capture%20Screenshot
+SeleniumLibrary 5.0.0
+https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#library-documentation-top
+SeleniumLibrary 2.9.2
+http://robotframework.org/OldSeleniumLibrary/SeleniumLibrary.html
 
-online egy sor beszurása
+robot framework BuiltIn library
+https://robotframework.org/robotframework/latest/libraries/BuiltIn.html
 
-
+data driver
+https://github.com/Snooz82/robotframework-datadriver

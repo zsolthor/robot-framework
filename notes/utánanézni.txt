@@ -4,4 +4,6 @@ másik video elements locator
 
 https://lms.greenfox.academy/enrollments
 
+implicit vs timeout, speed
+
 

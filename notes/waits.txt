@@ -1,0 +1,35 @@
+Implicit VS Explicit
+Both are dynamic waits.
+
+Implicit  -  rejtett, közvetett
+    tells the webdriver maximum wait time when searching for elements before throwing: No such element exception
+    this is global, all webelements in the script
+    do not specify expected conditions on the element to be located
+
+    36-os példában:
+    Set Selenium Implicit Wait  Sets the implicit wait value used by Selenium.
+    Get Selenium Implicit Wait  Gets the implicit wait value used by Selenium.
+    Set Browser Implicit Wait   Sets the implicit wait value used by Selenium.
+
+Explicit  -  1. világosan kimondott, egyértelmű; 2. közvetlen;
+    tells the webdriver to halt the execution until a particular condition is met or the time has passed
+    this applicable only those webelements which are specified by the user
+    explicit wait requires the expected conditions to be specified for elements, like wait until element is enabled.
+
+    37-es példában:
+    Wait Until Page Contains    Waits until text appears on the current page.
+    Wait Until Page Contains Element    Waits until the element locator appears on the current page.
+    Wait Until Page Does Not Contains    Waits until text disappears from the current page.
+    Wait Until Page Does Not Contains Element    Waits until the element locator disappears from the current page.
+
+    Wait Until Location Is  Waits until the current URL is expected.
+    Wait Until Location Is Not  Waits until the current URL is not location.
+    Wait Until Location Contains    Waits until the current URL contains expected.
+    Wait Until Location Does Not Contains   Waits until the current URL does not contains location.
+
+    Wait Until Element Contains Waits until the element locator contains text.
+    Wait Until Element Does Not Contains    Waits until the element locator does not contain text.
+    Wait Until Element Is Visible   Waits until the element locator is visible.
+    Wait Until Element Is Not Visible   Waits until the element locator is not visible.
+    Wait Until Element Is Enabled   Waits until the element locator is enabled.
+

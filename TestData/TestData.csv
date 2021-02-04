@@ -1,0 +1,7 @@
+*** Test Cases ***;${username};${password};${error_msg};
+Verify Login Fails - Blank username and password;"";"";Epic sadface: Username is required;
+Verify Login Fails - Blank username and good password;"";secret_sauce;Epic sadface: Username is required;
+Verify Login Fails - Wrong username;standard_us;secret_sauce;Epic sadface: Username and password do not match any user in this service;
+Verify Login Fails - Locked out user;locked_out_user;secret_sauce;Epic sadface: Sorry, this user has been locked out;
+Verify Login Fails - Wrong password;standard_user;secret_sa;Epic sadface: Username and password do not match any user in this service;
+Verify Login Fails - wrong username and password;standard_us;secret_sa;Epic sadface: Username and password do not match any user in this service;
